@@ -1,0 +1,432 @@
+:root{
+    --navy:#071a33;
+    --navy2:#0b2a55;
+    --navy3:#123d7a;
+
+    --bg:#f3f6fb;
+    --card:#ffffff;
+    --text:#0f172a;
+    --muted:#5b6475;
+    --border:rgba(15,23,42,.12);
+
+    --shadow: 0 14px 40px rgba(2,6,23,.12);
+    --shadow2: 0 10px 24px rgba(2,6,23,.10);
+    --radius:18px;
+
+    --glass: rgba(255,255,255,.78);
+    --glassBorder: rgba(255,255,255,.35);
+}
+
+*{box-sizing:border-box}
+
+body{
+    margin:0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    color:var(--text);
+    background:
+            radial-gradient(circle at 20% 10%, rgba(11,42,85,.06), transparent 45%),
+            radial-gradient(circle at 80% 20%, rgba(18,61,122,.06), transparent 45%),
+            linear-gradient(180deg, #f6f8fe, var(--bg));
+    position: relative;
+    overflow-x: hidden;
+}
+
+a{color:inherit}
+
+/* =========================
+   Fond animé sur les côtés
+   ========================= */
+body::before,
+body::after{
+    content:"";
+    position: fixed;
+    z-index: -2;
+    top: -20vh;
+    width: 55vw;
+    height: 140vh;
+    filter: blur(40px);
+    opacity: .45;
+    pointer-events: none;
+    background:
+            radial-gradient(circle at 30% 20%, rgba(7,26,51,.75), transparent 55%),
+            radial-gradient(circle at 55% 65%, rgba(18,61,122,.55), transparent 60%),
+            radial-gradient(circle at 70% 30%, rgba(11,42,85,.55), transparent 55%);
+    animation: drift 14s ease-in-out infinite alternate;
+}
+body::before{ left:-35vw; }
+body::after{
+    right:-35vw;
+    transform: scaleX(-1);
+    animation-duration: 18s;
+}
+
+@keyframes drift{
+    from { transform: translateY(0) translateX(0) scale(1); }
+    to   { transform: translateY(18px) translateX(22px) scale(1.04); }
+}
+
+@media (prefers-reduced-motion: reduce){
+    body::before, body::after{ animation: none; }
+}
+
+/* =========================
+   Layout
+   ========================= */
+.container{
+    max-width:980px;
+    margin:0 auto;
+    padding:24px;
+    position: relative;
+}
+.container::before{
+    content:"";
+    position:absolute;
+    inset: 6px;
+    border-radius: 22px;
+    background: rgba(255,255,255,.55);
+    border: 1px solid rgba(255,255,255,.35);
+    z-index: -1;
+}
+
+/* =========================
+   Topbar / Nav
+   ========================= */
+.topbar{
+    position:sticky;
+    top:0;
+    z-index:10;
+    background: rgba(7,26,51,.86);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,.10);
+}
+
+.topbar-inner{
+    max-width:980px;
+    margin:0 auto;
+    padding:12px 24px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-weight:800;
+    color:#fff;
+}
+
+.dot{
+    width:10px;
+    height:10px;
+    border-radius:999px;
+    background: rgba(255,255,255,.85);
+}
+
+.nav{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.pill{
+    padding:8px 12px;
+    border-radius:999px;
+    text-decoration:none;
+    font-weight:600;
+    font-size:14px;
+
+    color: rgba(255,255,255,.88);
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.12);
+
+    transition: transform .12s ease, background .12s ease, border-color .12s ease;
+}
+
+.pill:hover{
+    transform: translateY(-1px);
+    background: rgba(255,255,255,.12);
+    border-color: rgba(255,255,255,.20);
+}
+
+.pill.active{
+    color: var(--navy);
+    background: rgba(255,255,255,.92);
+    border-color: rgba(255,255,255,.55);
+}
+
+/* bouton "pill" (pour onglets / galerie) */
+button.pill{
+    cursor:pointer;
+    font-family: inherit;
+}
+
+/* Pills dans les cartes : visibles (sinon trop “nav”) */
+.card a.pill,
+.card button.pill{
+    color: var(--navy);
+    background: rgba(11,31,58,.06);
+    border-color: rgba(11,31,58,.16);
+}
+.card a.pill:hover,
+.card button.pill:hover{
+    background: rgba(11,31,58,.10);
+    border-color: rgba(11,31,58,.22);
+}
+
+/* =========================
+   Cards / Sections
+   ========================= */
+.card{
+    background:var(--card);
+    border: 1px solid rgba(7,26,51,.10);
+    box-shadow: var(--shadow2);
+    border-radius: var(--radius);
+    transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+}
+
+.card:hover{
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+    border-color: rgba(11,31,58,.20);
+}
+
+.section{
+    padding:26px;
+    margin-top:16px;
+}
+
+.muted{ color: rgba(15,23,42,.72); }
+
+/* Titres avec petite barre (mais PAS sur projets/skills) */
+.section h2, .section h3{ color: var(--navy); }
+
+.section h2{
+    position: relative;
+    padding-left: 12px;
+}
+.section h2::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top: 6px;
+    width: 5px;
+    height: 22px;
+    border-radius: 999px;
+    background: linear-gradient(180deg, var(--navy), var(--navy2));
+}
+
+/* =========================
+   Hero (accueil)
+   ========================= */
+.hero{
+    margin-top:18px;
+    background: linear-gradient(135deg, var(--navy), var(--navy2));
+    color:#fff;
+    border-radius: var(--radius);
+    padding:28px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    inset:-2px;
+    background:
+            radial-gradient(circle at 20% 15%, rgba(255,255,255,.16), transparent 40%),
+            radial-gradient(circle at 70% 60%, rgba(255,255,255,.12), transparent 45%);
+    pointer-events:none;
+}
+
+.hero-inner{
+    display:grid;
+    grid-template-columns: 1.2fr .8fr;
+    gap:18px;
+    align-items:center;
+}
+
+.avatar{
+    width:220px;
+    height:220px;
+    border-radius:24px;
+    object-fit:cover;
+    justify-self:end;
+    border:2px solid rgba(255,255,255,.25);
+}
+
+.btn{
+    display:inline-flex;
+    padding:10px 14px;
+    border-radius:12px;
+    text-decoration:none;
+    font-weight:800;
+    background: rgba(255,255,255,.95);
+    color: var(--navy);
+    border: 1px solid rgba(255,255,255,.65);
+    box-shadow: 0 10px 22px rgba(2,6,23,.15);
+    margin-right:8px;
+    transition: transform .12s ease, box-shadow .12s ease;
+}
+
+.btn:hover{
+    transform: translateY(-1px);
+    box-shadow: 0 14px 28px rgba(2,6,23,.18);
+}
+
+/* =========================
+   Page hero (autres pages)
+   ========================= */
+.page-hero{
+    margin-top: 18px;
+    padding: 18px 22px;
+    border-radius: var(--radius);
+    color: #fff;
+    background: linear-gradient(135deg, var(--navy), var(--navy2));
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+}
+
+.page-hero::after{
+    content:"";
+    position:absolute;
+    inset:-2px;
+    background:
+            radial-gradient(circle at 20% 20%, rgba(255,255,255,.18), transparent 45%),
+            radial-gradient(circle at 70% 60%, rgba(255,255,255,.12), transparent 50%);
+    pointer-events:none;
+}
+
+.page-hero h1{ margin: 0 0 6px; font-size: 26px; }
+.page-hero p{ margin: 0; opacity: .9; }
+
+/* =========================
+   Infos (onglets/panels)
+   ========================= */
+.panel{ display:none; }
+.panel.active{ display:block; }
+
+.cv-frame{
+    margin-top: 12px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: #fff;
+    box-shadow: var(--shadow2);
+}
+.cv-frame iframe{
+    width: 100%;
+    height: 75vh;
+    border: 0;
+    display: block;
+}
+
+.list{
+    margin: 10px 0 0;
+    padding-left: 18px;
+}
+.list li{ margin: 6px 0; }
+
+.grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-top: 14px;
+}
+@media (max-width: 900px){
+    .grid{ grid-template-columns: 1fr; }
+    .hero-inner{ grid-template-columns: 1fr; }
+    .avatar{ justify-self: start; }
+}
+
+/* =========================
+   Projets / Compétences
+   ========================= */
+.projects{
+    display: grid;
+    gap: 14px;
+    margin-top: 14px;
+}
+
+.project{
+    padding: 18px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: #fff;
+    box-shadow: var(--shadow2);
+}
+
+/* IMPORTANT : PAS de ligne verticale à gauche -> rien ici */
+
+.skills-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-top: 14px;
+}
+.skill-card{
+    padding: 18px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: #fff;
+    box-shadow: var(--shadow2);
+}
+@media (max-width: 900px){
+    .skills-grid{ grid-template-columns: 1fr; }
+}
+
+.tag{
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 8px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(11,31,58,.18);
+    font-weight: 600;
+    font-size: 13px;
+    background: rgba(11,31,58,.10);
+    color: var(--navy);
+}
+
+/* =========================
+   Galerie d'images (toggle)
+   ========================= */
+/* cachée par défaut */
+.gallery{
+    display: none;
+    margin-top: 14px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+.gallery.open{
+    display: grid;
+}
+.gallery img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow2);
+}
+@media (max-width: 900px){
+    .gallery{ grid-template-columns: 1fr; }
+    .gallery img{ height: 240px; }
+}
+.gallery-toggle{
+    margin-top: 12px;
+}
+
+/* =========================
+   Footer
+   ========================= */
+.footer{
+    margin: 18px 0 6px;
+    text-align: center;
+    color: rgba(15,23,42,.65);
+    font-size: 14px;
+}

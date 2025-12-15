@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projets – Sami Boutiba</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header class="topbar">
+    <div class="topbar-inner">
+        <div class="brand">
+            <span class="dot"></span>
+            <span>Portfolio</span>
+        </div>
+
+        <nav class="nav">
+            <a class="pill" href="index.html">Accueil</a>
+            <a class="pill" href="competences.html">Compétences</a>
+            <a class="pill active" href="projets.html">Projets</a>
+            <a class="pill" href="informations.html">Informations</a>
+            <a class="pill" href="contact.html">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="page-hero">
+        <h1>Mes projets</h1>
+        <p>Projets scolaires et personnels, avec les technos utilisées.</p>
+    </section>
+
+    <section class="card section">
+        <h2 style="margin-top:0;">Mes projets</h2>
+        <p class="muted" style="margin-top:6px;">
+            Une sélection de projets scolaires et personnels. J’ajoute au fur et à mesure.
+        </p>
+
+        <div class="projects">
+
+            <!-- Projet 1 -->
+            <article class="project">
+                <h3 style="margin:0 0 8px;">Site WordPress — Projet web</h3>
+                <p class="muted" style="margin:0 0 10px;">
+                    Création d’un site sous WordPress avec personnalisation de thème et gestion de contenu.
+                </p>
+                <div>
+                    <span class="tag">WordPress</span>
+                    <span class="tag">CMS</span>
+                    <span class="tag">Web</span>
+                </div>
+
+                <button class="pill gallery-toggle" type="button" data-gallery="g-wordpress" aria-expanded="false">
+                    Afficher les images
+                </button>
+
+                <div id="g-wordpress" class="gallery">
+                    <img src="assets/site_wordpress.png" alt="Aperçu du site WordPress">
+                </div>
+            </article>
+
+            <!-- Projet 2 -->
+            <article class="project">
+                <h3 style="margin:0 0 8px;">Site vitrine — Projet scolaire</h3>
+                <p class="muted" style="margin:0 0 10px;">
+                    Développement d’un site vitrine en HTML, CSS et JavaScript avec navigation multi-pages.
+                </p>
+                <div>
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">JavaScript</span>
+                </div>
+
+                <button class="pill gallery-toggle" type="button" data-gallery="g-vitrine" aria-expanded="false">
+                    Afficher les images
+                </button>
+
+                <div id="g-vitrine" class="gallery">
+                    <img src="assets/site_API.png" alt="Aperçu du site vitrine">
+                </div>
+            </article>
+
+            <!-- Projet 3 -->
+            <article class="project">
+                <h3 style="margin:0 0 8px;">Gestionnaire de contacts — Stage (1ʳᵉ année)</h3>
+                <p class="muted" style="margin:0 0 10px;">
+                    Application de gestion de contacts : analyse du besoin, ajout/modif/suppression (CRUD).
+                </p>
+                <div>
+                    <span class="tag">WinDev</span>
+                    <span class="tag">CRUD</span>
+                    <span class="tag">Analyse</span>
+                </div>
+
+                <button class="pill gallery-toggle" type="button" data-gallery="g-contacts" aria-expanded="false">
+                    Afficher les images
+                </button>
+
+                <div id="g-contacts" class="gallery">
+                    <img src="assets/Gestionnaire_de_contact.png" alt="Capture du gestionnaire de contacts">
+                </div>
+            </article>
+
+            <!-- Projet 4 -->
+            <article class="project">
+                <h3 style="margin:0 0 8px;">Jeu en JavaFX</h3>
+                <p class="muted" style="margin:0 0 10px;">
+                    Création d’un jeu de mémoire avec personnalisation des cartes.
+                </p>
+                <div>
+                    <span class="tag">JavaFX</span>
+                    <span class="tag">Jeu</span>
+                </div>
+
+                <button class="pill gallery-toggle" type="button" data-gallery="g-javafx" aria-expanded="false">
+                    Afficher les images
+                </button>
+
+                <div id="g-javafx" class="gallery">
+                    <img src="assets/pokemon_Menu.png" alt="Menu du jeu">
+                    <img src="assets/pokemon_Game.png" alt="Jeu en cours">
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <footer class="footer">© 2025 — Portfolio de Sami Boutiba</footer>
+</main>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll(".gallery-toggle").forEach(btn => {
+            const id = btn.dataset.gallery;
+            const gallery = document.getElementById(id);
+
+            // par défaut : fermé
+            gallery.classList.remove("open");
+            btn.textContent = "Afficher les images";
+            btn.setAttribute("aria-expanded", "false");
+
+            btn.addEventListener("click", () => {
+                const isOpen = gallery.classList.toggle("open");
+                btn.textContent = isOpen ? "Masquer les images" : "Afficher les images";
+                btn.setAttribute("aria-expanded", String(isOpen));
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

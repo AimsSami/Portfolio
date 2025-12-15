@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Informations — Sami</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<header class="topbar">
+    <div class="topbar-inner">
+        <div class="brand">
+            <span class="dot"></span>
+            <span>Informations</span>
+        </div>
+
+        <nav class="nav" aria-label="Sections">
+            <button class="pill active" data-target="cv" type="button">CV</button>
+            <button class="pill" data-target="apropos" type="button">À propos</button>
+            <button class="pill" data-target="objectifs" type="button">Objectifs</button>
+            <a class="pill" href="index.html">Retour</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="page-hero">
+        <h1>Informations</h1>
+        <p>CV, à propos et objectifs.</p>
+    </section>
+
+    <section id="cv" class="panel active">
+        <div class="card section">
+            <h2 style="margin-top:0;">Mon CV</h2>
+
+            <div class="cv-frame">
+                <iframe src="assets/cv.pdf" title="CV de Sami" loading="lazy"></iframe>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="apropos" class="panel">
+        <div class="card section">
+            <h2 style="margin-top:0;">À propos de moi</h2>
+
+            <h3>Qui je suis</h3>
+            <p>
+                Je m’appelle <strong>Sami</strong>. Je suis étudiant en informatique, orienté
+                <strong>développement</strong> et j’aime travailler sur des projets concrets.
+            </p>
+
+            <h3>Ce que j’aime faire</h3>
+            <ul class="list">
+                <li>Créer des applis claires et propres</li>
+                <li>Comprendre et résoudre les bugs</li>
+                <li>Apprendre des outils (Git, Docker, frameworks…)</li>
+            </ul>
+
+            <h3>Mes points forts</h3>
+            <ul class="list">
+                <li>Autonome</li>
+                <li>Persévérant</li>
+                <li>J’aime améliorer la qualité</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="objectifs" class="panel">
+        <div class="card section">
+            <h2 style="margin-top:0;">Objectifs à venir</h2>
+
+            <div class="grid">
+                <article class="card section">
+                    <h3 style="margin-top:0;">Court terme</h3>
+                    <ul class="list">
+                        <li>Portfolio solide</li>
+                        <li>Me renforcer en algorithmie / clean code</li>
+                        <li>Être à l’aise avec Git / Docker</li>
+                    </ul>
+                </article>
+
+                <article class="card section">
+                    <h3 style="margin-top:0;">Moyen terme</h3>
+                    <ul class="list">
+                        <li>Stage orienté dev</li>
+                        <li>1 à 2 projets personels présentables</li>
+                        <li>Avoir les bases en C++ / Rust</li>
+                    </ul>
+                </article>
+
+                <article class="card section">
+                    <h3 style="margin-top:0;">Long terme</h3>
+                    <ul class="list">
+                        <li>integrer une école de game design</li>
+                        <li>Faire des projets plus ambitieux</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">© 2025 — Portfolio de Sami Boutiba</footer>
+</main>
+
+<script>
+    const buttons = document.querySelectorAll("button.pill[data-target]");
+    const panels = document.querySelectorAll(".panel");
+
+    buttons.forEach(btn => {
+        btn.addEventListener("click", () => {
+            buttons.forEach(b => b.classList.remove("active"));
+            panels.forEach(p => p.classList.remove("active"));
+
+            btn.classList.add("active");
+            document.getElementById(btn.dataset.target).classList.add("active");
+        });
+    });
+</script>
+</body>
+</html>

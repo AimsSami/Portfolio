@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parcours | Sami Boutiba</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">sami<span>.dev</span></a>
+      <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="parcours.html" class="active">Parcours</a></li>
+        <li><a href="realisations.html">Réalisations</a></li>
+        <li><a href="synthese.html">Synthèse</a></li>
+        <li><a href="veille.html">Veille</a></li>
+        <li><a href="informations.html">Informations</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="main">
+    <div class="container">
+
+      <div class="section-header">
+        <span class="section-tag">Mon parcours</span>
+        <h1 class="section-title">Formation & Expériences</h1>
+        <p class="section-subtitle">Mon chemin vers le développement logiciel.</p>
+      </div>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <span class="timeline-date">Janvier - Mars 2026 &middot; 7 semaines</span>
+          <h3 class="timeline-title">Stage - Développeur Full-Stack</h3>
+          <p class="timeline-location">Levaral &mdash; Saint-Germain-en-Laye</p>
+          <div class="timeline-desc">
+            <p>Conception et développement de la V1 d'une application web de gestion de staffing (CRA-APP) pour une entreprise de conseil.</p>
+            <ul>
+              <li>Développement d'une application Spring Boot (Java 17) avec Thymeleaf et JPA</li>
+              <li>Mise en place d'un système d'authentification multi-rôles (Gérant, Admin, Consultant, Référent, Client)</li>
+              <li>CRUD complet : gestion des missions, clients, consultants et emplois du temps</li>
+              <li>Analyse du cahier des charges incomplet et création de la documentation complète (cadrage, modèle de données, user stories, maquettes)</li>
+              <li>Organisation du projet via Trello à partir de ressources quasi-vides</li>
+              <li>Scripts PowerShell pour l'import d'images et le formatage de fichiers Excel vers WooCommerce pour un site client</li>
+            </ul>
+            <div class="tag-group" style="margin-top: 12px;">
+              <span class="tag">Java 17</span>
+              <span class="tag">Spring Boot</span>
+              <span class="tag">Thymeleaf</span>
+              <span class="tag">JPA / H2</span>
+              <span class="tag">PowerShell</span>
+              <span class="tag">WooCommerce</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <span class="timeline-date">2024 - 2026</span>
+          <h3 class="timeline-title">BTS SIO option SLAM</h3>
+          <p class="timeline-location">Groupe Scolaire Montalembert</p>
+          <div class="timeline-desc">
+            <p>Solutions Logicielles et Applications Métiers. Formation axée sur le développement d'applications, la gestion de bases de données et la conduite de projets informatiques.</p>
+            <ul>
+              <li>Développement Java, PHP, JavaScript, SQL</li>
+              <li>Frameworks : Symfony, JavaFX, Spring Boot</li>
+              <li>Outils : Git, Docker, Maven, Trello</li>
+              <li>Projet E6 : GestTravaux (gestion de travaux immobiliers)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <span class="timeline-date">2024 &middot; 5 semaines</span>
+          <h3 class="timeline-title">Stage - Développeur WinDev</h3>
+          <p class="timeline-location">Stage de première année</p>
+          <div class="timeline-desc">
+            <p>Développement d'un gestionnaire de contacts en WinDev avec opérations CRUD complètes.</p>
+            <ul>
+              <li>Application desktop de gestion de contacts</li>
+              <li>Opérations CRUD sur base de données</li>
+              <li>Interface utilisateur WinDev</li>
+            </ul>
+            <div class="tag-group" style="margin-top: 12px;">
+              <span class="tag">WinDev</span>
+              <span class="tag">SQL</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      Sami Boutiba &mdash; Portfolio BTS SIO SLAM 2024-2026
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>

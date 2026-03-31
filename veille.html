@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veille Technologique | Sami Boutiba</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">sami<span>.dev</span></a>
+      <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="parcours.html">Parcours</a></li>
+        <li><a href="realisations.html">Réalisations</a></li>
+        <li><a href="synthese.html">Synthèse</a></li>
+        <li><a href="veille.html" class="active">Veille</a></li>
+        <li><a href="informations.html">Informations</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="main">
+    <div class="container">
+
+      <div class="section-header">
+        <span class="section-tag">Veille technologique</span>
+        <h1 class="section-title">Les moteurs de jeu : comment sont-ils devenus accessibles à tous ?</h1>
+      </div>
+
+      <!-- Sommaire -->
+      <div class="card" style="margin-bottom: 40px;">
+        <h3 style="margin-bottom: 12px;">Sommaire</h3>
+        <ol style="list-style: none;">
+          <li style="margin-bottom: 6px;"><a href="#introduction" style="display: flex; gap: 8px;"><span style="color: var(--accent); font-family: var(--font-mono); font-weight: 700;">1.</span> Introduction</a></li>
+          <li style="margin-bottom: 6px;"><a href="#problematique" style="display: flex; gap: 8px;"><span style="color: var(--accent); font-family: var(--font-mono); font-weight: 700;">2.</span> Problématique</a></li>
+          <li style="margin-bottom: 6px;"><a href="#definition" style="display: flex; gap: 8px;"><span style="color: var(--accent); font-family: var(--font-mono); font-weight: 700;">3.</span> Définition</a></li>
+          <li style="margin-bottom: 6px;"><a href="#methode" style="display: flex; gap: 8px;"><span style="color: var(--accent); font-family: var(--font-mono); font-weight: 700;">4.</span> Méthode de veille</a></li>
+          <li style="margin-bottom: 6px;"><a href="#evolution" style="display: flex; gap: 8px;"><span style="color: var(--accent); font-family: var(--font-mono); font-weight: 700;">5.</span> Évolution</a></li>
+          <li style="margin-bottom: 6px;"><a href="#impact" style="display: flex; gap: 8px;"><span style="color: var(--accent); font-family: var(--font-mono); font-weight: 700;">6.</span> Impact</a></li>
+          <li style="margin-bottom: 6px;"><a href="#conclusion" style="display: flex; gap: 8px;"><span style="color: var(--accent); font-family: var(--font-mono); font-weight: 700;">7.</span> Conclusion</a></li>
+        </ol>
+      </div>
+
+      <!-- 1. Introduction -->
+      <section class="veille-section" id="introduction">
+        <h3><span style="color: var(--accent); font-family: var(--font-mono);">1.</span> Introduction</h3>
+        <div class="veille-content card">
+          <p>
+            Il y a 20 ans, créer un jeu vidéo nécessitait une équipe de dizaines de personnes et un budget conséquent. Aujourd'hui, un développeur seul peut publier un jeu sur Steam depuis sa chambre. Qu'est-ce qui a changé ? En grande partie, les <strong>moteurs de jeu</strong>.
+          </p>
+          <p>
+            Passionné de jeux vidéo et aspirant à intégrer une école de game design, j'ai choisi de comprendre cette transformation à travers ma veille technologique. Ce sujet est aussi directement lié au BTS SIO SLAM : les moteurs de jeu mobilisent la <strong>programmation orientée objet</strong>, les <strong>design patterns</strong> et les <strong>méthodologies de projet</strong> que l'on pratique en formation.
+          </p>
+        </div>
+      </section>
+
+      <!-- 2. Problématique -->
+      <section class="veille-section" id="problematique">
+        <h3><span style="color: var(--accent); font-family: var(--font-mono);">2.</span> Problématique</h3>
+        <div class="card" style="border-left: 3px solid var(--accent); padding: 24px 28px;">
+          <p style="font-size: 1.1rem; font-weight: 600; color: var(--text-primary); line-height: 1.6;">
+            Comment les moteurs de jeu sont-ils passés d'outils réservés aux grands studios à des plateformes accessibles à tous, et qu'est-ce que cela change concrètement pour les développeurs indépendants ?
+          </p>
+        </div>
+      </section>
+
+      <!-- 3. Définition -->
+      <section class="veille-section" id="definition">
+        <h3><span style="color: var(--accent); font-family: var(--font-mono);">3.</span> Définition</h3>
+        <div class="veille-content card">
+          <p>
+            Un <strong>moteur de jeu</strong> (game engine) est un framework logiciel qui regroupe tous les outils nécessaires à la création d'un jeu : rendu graphique (2D/3D), moteur physique, gestion audio, scripting et éditeur visuel. Sans moteur, chaque studio devrait recoder ces systèmes de zéro.
+          </p>
+          <p style="margin-top: 12px;">
+            Trois moteurs dominent le marché aujourd'hui : <strong>Unity</strong> (C#, leader mobile), <strong>Unreal Engine 5</strong> (C++, référence AAA) et <strong>Godot</strong> (GDScript, open source). Chacun incarne une vision différente de l'accessibilité.
+          </p>
+        </div>
+
+        <div class="veille-comparison" style="margin-top: 24px;">
+          <div class="veille-engine-card card">
+            <div class="engine-name">Unity</div>
+            <div class="engine-tagline">Le polyvalent accessible</div>
+            <ul class="engine-details">
+              <li>Langage : C#</li>
+              <li>Gratuit sous 200K$/an</li>
+              <li>~70% des jeux mobiles</li>
+              <li>Hollow Knight, Cuphead, Genshin Impact</li>
+            </ul>
+          </div>
+          <div class="veille-engine-card card">
+            <div class="engine-name">Unreal Engine 5</div>
+            <div class="engine-tagline">La référence AAA</div>
+            <ul class="engine-details">
+              <li>Langage : C++ et Blueprints</li>
+              <li>Gratuit, 5% au-delà de 1M$</li>
+              <li>Nanite, Lumen, MetaHuman</li>
+              <li>Fortnite, FF VII Remake, Hogwarts Legacy</li>
+            </ul>
+          </div>
+          <div class="veille-engine-card card">
+            <div class="engine-name">Godot 4</div>
+            <div class="engine-tagline">L'open source qui monte</div>
+            <ul class="engine-details">
+              <li>Langage : GDScript, C#, C++</li>
+              <li>100% gratuit, licence MIT</li>
+              <li>Léger, aucune royalties</li>
+              <li>Brotato, Cassette Beasts, Dome Keeper</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. Méthode de veille -->
+      <section class="veille-section" id="methode">
+        <h3><span style="color: var(--accent); font-family: var(--font-mono);">4.</span> Méthode de veille</h3>
+        <div class="about-grid">
+          <div class="card about-card">
+            <h3>Sources</h3>
+            <ul>
+              <li>Sites officiels : unity.com, unrealengine.com, godotengine.org</li>
+              <li>Presse : Game Developer, TechCrunch, itch.io</li>
+              <li>Reddit : r/gamedev, r/godot, r/unrealengine</li>
+              <li>YouTube : GDQuest, Brackeys, Game Maker's Toolkit</li>
+            </ul>
+          </div>
+          <div class="card about-card">
+            <h3>Outils</h3>
+            <ul>
+              <li>Google Alerts (Unity, Unreal, Godot, game engine)</li>
+              <li>Flux RSS via Feedly</li>
+              <li>GitHub : suivi des releases Godot</li>
+              <li>Fréquence : consultation hebdomadaire</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Évolution — LE COEUR DE LA VEILLE EN STORYTELLING -->
+      <section class="veille-section" id="evolution">
+        <h3><span style="color: var(--accent); font-family: var(--font-mono);">5.</span> Évolution</h3>
+
+        <div class="veille-content" style="margin-bottom: 24px;">
+          <p>Pour répondre à la problématique, j'ai suivi l'évolution des moteurs de jeu à travers 10 articles qui racontent, ensemble, une même histoire : celle d'une industrie qui s'ouvre progressivement à tous.</p>
+        </div>
+
+        <!-- Chapitre 1 : L'ère propriétaire -->
+        <div class="card" style="margin-bottom: 24px;">
+          <h4 style="color: var(--accent); margin-bottom: 16px; font-size: 1rem;">D'abord, les moteurs étaient réservés aux grands studios</h4>
+          <div class="veille-content">
+            <p>Pendant longtemps, chaque studio construisait son propre moteur. id Tech, Source, CryEngine : ces noms ne parlent qu'aux initiés, et pour cause, ils n'étaient pas accessibles au public. Créer un jeu nécessitait soit un budget énorme, soit des années de travail sur son propre moteur.</p>
+          </div>
+
+          <div class="card article-card" style="margin-top: 16px; background: var(--bg-secondary);">
+            <div class="article-meta">
+              <span class="tag">Article 1</span>
+              <span class="article-source">DEV Community &mdash; 2024</span>
+            </div>
+            <h4 class="article-title">The history of game engines — from assembly coding to photorealism and AI</h4>
+            <p class="article-desc">Rétrospective de l'évolution des moteurs de jeu, du code assembleur des années 70 aux outils modernes.</p>
+            <a href="https://dev.to/ispmanager/the-history-of-game-engines-from-assembly-coding-to-photorealism-and-ai-d9h" target="_blank" class="article-link">Lire l'article</a>
+            <p class="article-takeaway"><strong>Ce que cet article nous apprend :</strong> La séparation entre moteur et contenu (initiée par John Carmack dans les années 90) a été le premier pas vers la démocratisation. C'est cette idée qui a permis, des années plus tard, de créer des moteurs réutilisables par tous.</p>
+          </div>
+
+          <div class="card article-card" style="margin-top: 12px; background: var(--bg-secondary);">
+            <div class="article-meta">
+              <span class="tag">Article 2</span>
+              <span class="article-source">Medium &mdash; 2024</span>
+            </div>
+            <h4 class="article-title">How Game Engines Have Democratized Game Development</h4>
+            <p class="article-desc">Analyse de la transition du modèle propriétaire vers le modèle freemium et open source.</p>
+            <a href="https://kedarshukla007.medium.com/how-game-engines-have-democratized-game-development-5a7b37f9cb7d" target="_blank" class="article-link">Lire l'article</a>
+            <p class="article-takeaway"><strong>Ce que cet article nous apprend :</strong> C'est le passage au modèle gratuit (Unity dès 2005, Unreal en 2015) qui a véritablement ouvert les portes. Le coût n'est plus une barrière à l'entrée : n'importe qui peut télécharger un moteur professionnel et commencer à créer.</p>
+          </div>
+        </div>
+
+        <!-- Chapitre 2 : La crise Unity -->
+        <div class="card" style="margin-bottom: 24px;">
+          <h4 style="color: var(--accent); margin-bottom: 16px; font-size: 1rem;">Puis, une crise a tout remis en question</h4>
+          <div class="veille-content">
+            <p>En septembre 2023, Unity &mdash; le moteur utilisé par la majorité des indépendants &mdash; annonce une taxe par installation de jeu. La réaction est immédiate : les développeurs se sentent trahis. En quelques jours, le mot "exode" apparaît. Cet événement est central dans ma veille car il pose une question fondamentale : <strong>peut-on vraiment dépendre d'un outil gratuit qui appartient à une entreprise ?</strong></p>
+          </div>
+
+          <div class="card article-card" style="margin-top: 16px; background: var(--bg-secondary);">
+            <div class="article-meta">
+              <span class="tag">Article 3</span>
+              <span class="article-source">TechCrunch &mdash; Septembre 2023</span>
+            </div>
+            <h4 class="article-title">Unity U-turns on controversial runtime fee and begs forgiveness</h4>
+            <p class="article-desc">Récit de l'annonce, de la révolte des développeurs et du retrait de la mesure en moins de deux semaines.</p>
+            <a href="https://techcrunch.com/2023/09/22/unity-u-turns-on-controversial-runtime-fee-and-begs-forgiveness/" target="_blank" class="article-link">Lire l'article</a>
+            <p class="article-takeaway"><strong>Ce que cet article nous apprend :</strong> La démocratisation repose sur la confiance. Quand Unity a changé les règles du jeu, même un retour en arrière n'a pas suffi à réparer les dégâts. Le PDG a démissionné un mois plus tard.</p>
+          </div>
+
+          <div class="card article-card" style="margin-top: 12px; background: var(--bg-secondary);">
+            <div class="article-meta">
+              <span class="tag">Article 4</span>
+              <span class="article-source">Mediusware &mdash; 2025</span>
+            </div>
+            <h4 class="article-title">Unity Pricing Fallout: Lessons for Developers</h4>
+            <p class="article-desc">Analyse des conséquences à long terme de la controverse sur l'écosystème indie.</p>
+            <a href="https://mediusware.com/blog/unity-pricing-fallout-2025" target="_blank" class="article-link">Lire l'article</a>
+            <p class="article-takeaway"><strong>Ce que cet article nous apprend :</strong> Même après l'annulation de la taxe, beaucoup de studios ont migré vers Godot ou Unreal par précaution. La leçon est claire : un outil gratuit n'est pas forcément libre. La dépendance à un éditeur est un risque réel pour un indépendant.</p>
+          </div>
+        </div>
+
+        <!-- Chapitre 3 : L'essor de l'open source -->
+        <div class="card" style="margin-bottom: 24px;">
+          <h4 style="color: var(--accent); margin-bottom: 16px; font-size: 1rem;">L'open source est devenu la réponse</h4>
+          <div class="veille-content">
+            <p>La crise Unity a accéléré un mouvement déjà en cours : l'adoption de <strong>Godot</strong>, un moteur 100% open source sous licence MIT. Pas de royalties, pas de taxe surprise, et un code source que n'importe qui peut modifier. En quelques mois, Godot est passé de "petit moteur pour débutants" à une alternative crédible.</p>
+          </div>
+
+          <div class="card article-card" style="margin-top: 16px; background: var(--bg-secondary);">
+            <div class="article-meta">
+              <span class="tag">Article 5</span>
+              <span class="article-source">Azumo &mdash; 2024</span>
+            </div>
+            <h4 class="article-title">Open Source Horizons: Why Godot is the Engine You Should Know About</h4>
+            <p class="article-desc">Analyse des atouts de Godot : zéro coût, licence MIT, communauté en croissance de 30% par an.</p>
+            <a href="https://azumo.com/insights/open-source-horizons-why-godot-is-the-engine-you-should-know-about" target="_blank" class="article-link">Lire l'article</a>
+            <p class="article-takeaway"><strong>Ce que cet article nous apprend :</strong> L'open source n'est pas qu'une question de prix. C'est une garantie d'indépendance : personne ne peut changer les règles. Pour un indie, c'est la liberté de créer sans craindre qu'un éditeur modifie son modèle économique du jour au lendemain.</p>
+          </div>
+
+          <div class="card article-card" style="margin-top: 12px; background: var(--bg-secondary);">
+            <div class="article-meta">
+              <span class="tag">Article 6</span>
+              <span class="article-source">GameFromScratch &mdash; 2024</span>
+            </div>
+            <h4 class="article-title">Godot Popularity at GMTK Jam 2024 Explodes</h4>
+            <p class="article-desc">Godot représente 37% des jeux au GMTK Game Jam 2024, contre 43% pour Unity.</p>
+            <a href="https://gamefromscratch.com/godot-popularity-at-gmtk-jam-2024-explodes/" target="_blank" class="article-link">Lire l'article</a>
+            <p class="article-takeaway"><strong>Ce que cet article nous apprend :</strong> Les chiffres parlent : en un an, Godot a presque rattrapé Unity dans les game jams, terrain de jeu des indépendants. Ce n'est plus une niche, c'est un mouvement de fond.</p>
+          </div>
+        </div>
+
+        <!-- Chapitre 4 : Les grands moteurs s'adaptent -->
+        <div class="card" style="margin-bottom: 24px;">
+          <h4 style="color: var(--accent); margin-bottom: 16px; font-size: 1rem;">Les grands moteurs s'ouvrent aussi aux petits</h4>
+          <div class="veille-content">
+            <p>Face à cette concurrence, les moteurs propriétaires ne restent pas immobiles. Unreal Engine 5, avec ses technologies de pointe (Nanite, Lumen), est devenu gratuit jusqu'à 1M$ de revenus. Epic Games mise sur une stratégie claire : <strong>donner aux petites équipes les mêmes outils que les AAA</strong>.</p>
+          </div>
+
+          <div class="card article-card" style="margin-top: 16px; background: var(--bg-secondary);">
+            <div class="article-meta">
+              <span class="tag">Article 7</span>
+              <span class="article-source">Epic Games &mdash; 2024</span>
+            </div>
+            <h4 class="article-title">Small teams, big dreams: why these indies chose UE5 to power their games</h4>
+            <p class="article-desc">Témoignages de studios indépendants qui utilisent Unreal Engine 5 pour rivaliser visuellement avec les AAA.</p>
+            <a href="https://www.unrealengine.com/en-US/developer-interviews/small-teams-big-dreams-why-these-indies-chose-ue5-to-power-their-games" target="_blank" class="article-link">Lire l'article</a>
+            <p class="article-takeaway"><strong>Ce que cet article nous apprend :</strong> La démocratisation ne concerne pas que l'accès au moteur, mais aussi la qualité atteignable. Un studio de 3 personnes peut produire des visuels dignes d'un AAA. L'écart technique entre indie et grand studio se réduit drastiquement.</p>
+          </div>
+
+          <div class="card article-card" style="margin-top: 12px; background: var(--bg-secondary);">
+            <div class="article-meta">
+              <span class="tag">Article 8</span>
+              <span class="article-source">itch.io &mdash; 2025</span>
+            </div>
+            <h4 class="article-title">Game Engine Showdown 2025: Unity vs Godot vs Unreal &mdash; Which Should You Choose?</h4>
+            <p class="article-desc">Comparatif des trois moteurs du point de vue d'un développeur indépendant en 2025.</p>
+            <a href="https://itch.io/blog/1067028/game-engine-showdown-2025-unity-vs-godot-vs-unreal-which-should-you-choose" target="_blank" class="article-link">Lire l'article</a>
+            <p class="article-takeaway"><strong>Ce que cet article nous apprend :</strong> En 2025, un indépendant a le choix entre trois moteurs gratuits et puissants, chacun adapté à un profil différent. C'est la preuve que la démocratisation est réelle : la question n'est plus "ai-je accès à un moteur ?", mais "lequel est le mieux adapté à mon projet ?".</p>
+          </div>
+        </div>
+
+        <!-- Chapitre 5 : Le résultat et l'avenir -->
+        <div class="card" style="margin-bottom: 24px;">
+          <h4 style="color: var(--accent); margin-bottom: 16px; font-size: 1rem;">Résultat : les indies ont pris le pouvoir</h4>
+          <div class="veille-content">
+            <p>Tout cela a un résultat concret et mesurable : les jeux indépendants représentent désormais <strong>40% des ventes sur Steam</strong>, alors qu'ils constituent 90% des sorties. Et la prochaine étape est déjà là : l'IA générative promet de supprimer la dernière barrière, celle du code.</p>
+          </div>
+
+          <div class="card article-card" style="margin-top: 16px; background: var(--bg-secondary);">
+            <div class="article-meta">
+              <span class="tag">Article 9</span>
+              <span class="article-source">Genext Games &mdash; 2025</span>
+            </div>
+            <h4 class="article-title">Why Indie Games Are Taking Over the Market in 2025</h4>
+            <p class="article-desc">Analyse de la révolution indie : 40% des ventes Steam, des succès comme Balatro ou Lethal Company.</p>
+            <a href="https://genextgames.com/why-indie-games-are-taking-over-the-market-in-2025-the-revolution-nobody-saw-coming/" target="_blank" class="article-link">Lire l'article</a>
+            <p class="article-takeaway"><strong>Ce que cet article nous apprend :</strong> La démocratisation des moteurs a produit un résultat spectaculaire : des jeux créés par une ou deux personnes rivalisent avec des productions à plusieurs millions d'euros. L'accès aux outils a changé la donne.</p>
+          </div>
+
+          <div class="card article-card" style="margin-top: 12px; background: var(--bg-secondary);">
+            <div class="article-meta">
+              <span class="tag">Article 10</span>
+              <span class="article-source">Game Developer &mdash; 2025</span>
+            </div>
+            <h4 class="article-title">Unity says its AI tech will soon eliminate the need for coding</h4>
+            <p class="article-desc">Unity annonce que son IA permettra de créer des jeux casual par prompt en langage naturel.</p>
+            <a href="https://www.gamedeveloper.com/programming/unity-says-its-ai-tech-will-soon-be-able-to-prompt-full-casual-games-into-existence-" target="_blank" class="article-link">Lire l'article</a>
+            <p class="article-takeaway"><strong>Ce que cet article nous apprend :</strong> Si le code était encore la dernière barrière à l'entrée, l'IA est en train de la faire tomber. La démocratisation ne s'arrête pas : demain, même sans savoir programmer, on pourra créer un jeu. Cela pose aussi des questions sur l'avenir du métier de développeur de jeux.</p>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- 6. Impact -->
+      <section class="veille-section" id="impact">
+        <h3><span style="color: var(--accent); font-family: var(--font-mono);">6.</span> Impact</h3>
+        <div class="veille-content card">
+          <p>Cette veille m'a permis d'identifier trois impacts majeurs :</p>
+
+          <p style="margin-top: 16px;"><strong>Pour l'industrie</strong> : le marché des moteurs de jeu croît de 19,7% par an. Les jeux indépendants représentent 40% des ventes Steam. Des titres comme Hollow Knight, Celeste ou Balatro prouvent qu'un petit studio peut créer un succès mondial.</p>
+
+          <p style="margin-top: 12px;"><strong>Pour les développeurs</strong> : trois moteurs gratuits coexistent, chacun avec ses forces. L'open source (Godot) offre une garantie d'indépendance. Les compétences acquises (C#, C++, patterns) sont transférables vers d'autres domaines.</p>
+
+          <p style="margin-top: 12px;"><strong>Lien avec le BTS SIO SLAM</strong> : les moteurs de jeu utilisent les mêmes fondamentaux que le développement d'applications métiers :</p>
+          <ul style="list-style: none; margin-top: 8px;">
+            <li class="veille-list-item"><strong>POO</strong> : C# (Unity), C++ (Unreal), GDScript (Godot) = mêmes concepts que Java et PHP</li>
+            <li class="veille-list-item"><strong>Design patterns</strong> : Observer, State, Factory, MVC = les mêmes que dans Symfony ou Spring</li>
+            <li class="veille-list-item"><strong>Gestion de projet</strong> : Scrum et Kanban sont utilisés en studio comme en entreprise</li>
+            <li class="veille-list-item"><strong>Versionning</strong> : Git est le standard partout</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 7. Conclusion -->
+      <section class="veille-section" id="conclusion">
+        <h3><span style="color: var(--accent); font-family: var(--font-mono);">7.</span> Conclusion</h3>
+        <div class="veille-content card">
+          <p>
+            L'histoire racontée par ces 10 articles est claire : les moteurs de jeu sont passés d'outils fermés et coûteux à des <strong>plateformes gratuites, puissantes et accessibles</strong>. La crise Unity de 2023 a montré les limites du modèle propriétaire et accéléré l'essor de l'open source avec Godot. En parallèle, Unreal Engine 5 a mis les technologies AAA à portée des petits studios. Et l'IA s'apprête à supprimer la dernière barrière.
+          </p>
+          <p>
+            Mon objectif est clair : intégrer une formation en game design et travailler dans l'industrie du jeu vidéo. Les compétences SLAM acquises en BTS — POO, design patterns, gestion de projet, bases de données — sont le socle technique qui rend ce parcours possible. Les outils pour créer n'ont jamais été aussi accessibles, et je compte bien explorer Unity ou Godot pour créer mes propres projets.
+          </p>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      Sami Boutiba &mdash; Portfolio BTS SIO SLAM 2024-2026
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>

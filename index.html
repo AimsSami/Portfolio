@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sami Boutiba | Portfolio BTS SIO SLAM</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">sami<span>.dev</span></a>
+      <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Accueil</a></li>
+        <li><a href="parcours.html">Parcours</a></li>
+        <li><a href="realisations.html">Réalisations</a></li>
+        <li><a href="synthese.html">Synthèse</a></li>
+        <li><a href="veille.html">Veille</a></li>
+        <li><a href="informations.html">Informations</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="main">
+    <div class="container">
+      <section class="hero">
+        <div class="hero-content">
+          <p class="hero-greeting">Bonjour, je suis</p>
+          <h1 class="hero-name">Sami <span class="highlight">Boutiba</span></h1>
+          <p class="hero-role">
+            Étudiant en <strong>BTS SIO option SLAM</strong><br>
+            Passionné par le développement et le jeu vidéo.
+          </p>
+          <div class="hero-actions">
+            <a href="realisations.html" class="btn btn-primary">Voir mes projets</a>
+            <a href="assets/cv.pdf" target="_blank" class="btn btn-secondary">Télécharger mon CV</a>
+          </div>
+        </div>
+        <div class="hero-photo">
+          <img src="assets/Photo.png" alt="Photo de Sami Boutiba">
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      Sami Boutiba &mdash; Portfolio BTS SIO SLAM 2024-2026
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>

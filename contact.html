@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Sami Boutiba</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">sami<span>.dev</span></a>
+      <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="parcours.html">Parcours</a></li>
+        <li><a href="realisations.html">Réalisations</a></li>
+        <li><a href="synthese.html">Synthèse</a></li>
+        <li><a href="veille.html">Veille</a></li>
+        <li><a href="informations.html">Informations</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="main">
+    <div class="container">
+
+      <div class="section-header">
+        <span class="section-tag">Contact</span>
+        <h1 class="section-title">Me contacter</h1>
+        <p class="section-subtitle">N'hésitez pas à me contacter par email ou à consulter mes projets sur GitHub.</p>
+      </div>
+
+      <div class="contact-grid">
+
+        <a href="mailto:sami.mohamed.boutiba@gmail.com" class="card contact-card">
+          <div class="contact-icon">&#9993;</div>
+          <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-value">sami.mohamed.boutiba@gmail.com</div>
+          </div>
+        </a>
+
+        <a href="https://github.com/AimsSami" target="_blank" class="card contact-card">
+          <div class="contact-icon">&#128187;</div>
+          <div>
+            <div class="contact-label">GitHub</div>
+            <div class="contact-value">github.com/AimsSami</div>
+          </div>
+        </a>
+
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      Sami Boutiba &mdash; Portfolio BTS SIO SLAM 2024-2026
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>

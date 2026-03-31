@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Réalisations | Sami Boutiba</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">sami<span>.dev</span></a>
+      <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="parcours.html">Parcours</a></li>
+        <li><a href="realisations.html" class="active">Réalisations</a></li>
+        <li><a href="synthese.html">Synthèse</a></li>
+        <li><a href="veille.html">Veille</a></li>
+        <li><a href="informations.html">Informations</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="main">
+    <div class="container">
+
+      <div class="section-header">
+        <span class="section-tag">Mes réalisations</span>
+        <h1 class="section-title">Projets & Développements</h1>
+        <p class="section-subtitle">Les projets réalisés en formation, en stage et en autonomie.</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- PROJET 1 : GestTravaux -->
+        <article class="project-card">
+          <div class="project-header">
+            <div class="project-icon">&#127959;</div>
+            <span class="project-context context-ecole">Projet E6</span>
+          </div>
+          <div class="project-body">
+            <h2 class="project-title">GestTravaux</h2>
+            <p class="project-desc">
+              Application de gestion de travaux immobiliers pour la société fictive IMMOSYNC. Projet en binôme couvrant tout le cycle : création de chantiers, gestion de devis, suivi d'avancement et comparaison d'offres d'entrepreneurs.
+            </p>
+            <div class="project-details">
+              <h4>Mon rôle</h4>
+              <ul>
+                <li>Développement de l'application desktop Java (JavaFX + Hibernate)</li>
+                <li>Conception des entités JPA et du schéma MySQL (14 tables)</li>
+                <li>Système d'authentification et gestion de session</li>
+                <li>CRUD complet : propriétaires, biens, chantiers, prestations</li>
+                <li>Navigation entre vues avec SceneRouter</li>
+              </ul>
+            </div>
+            <div class="project-details">
+              <h4>Partie Web (Symfony 8)</h4>
+              <ul>
+                <li>Interfaces web pour inspecteurs, entrepreneurs et propriétaires</li>
+                <li>Doctrine ORM avec 11 entités mappées</li>
+                <li>Sécurité multi-rôles et gestion de documents</li>
+                <li>Docker Compose pour l'environnement de développement</li>
+              </ul>
+            </div>
+            <div class="tag-group">
+              <span class="tag">Java</span>
+              <span class="tag">JavaFX</span>
+              <span class="tag">Hibernate</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">Symfony 8</span>
+              <span class="tag">PHP 8.4</span>
+              <span class="tag">Doctrine</span>
+              <span class="tag">Docker</span>
+              <span class="tag">Maven</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJET 2 : CRA-APP Levaral -->
+        <article class="project-card">
+          <div class="project-header">
+            <div class="project-icon">&#128188;</div>
+            <span class="project-context context-stage">Stage 2e année</span>
+          </div>
+          <div class="project-body">
+            <h2 class="project-title">CRA-APP &mdash; Application de Staffing</h2>
+            <p class="project-desc">
+              V1 d'une application web de gestion de staffing pour Levaral (Saint-Germain-en-Laye). Objectif : transformer une idée de longue date en un projet concret avec une version fonctionnelle, à partir d'un cahier des charges très chargé mais incomplet et d'un Trello quasi vide.
+            </p>
+            <div class="project-details">
+              <h4>Ce que j'ai réalisé</h4>
+              <ul>
+                <li>Analyse du besoin et création de toute la documentation (cadrage, modèle de données, user stories, maquettes)</li>
+                <li>Développement Spring Boot (Java 17) avec Thymeleaf et JPA</li>
+                <li>Système multi-rôles : Gérant, Admin, Consultant, Référent, Client</li>
+                <li>Gestion des missions, clients, emplois du temps et profils</li>
+                <li>Accès différencié selon le statut avec gestion de droits</li>
+                <li>Interface complète avec sidebar, dashboard et formulaires CRUD</li>
+              </ul>
+            </div>
+            <div class="tag-group">
+              <span class="tag">Java 17</span>
+              <span class="tag">Spring Boot</span>
+              <span class="tag">Thymeleaf</span>
+              <span class="tag">JPA</span>
+              <span class="tag">H2</span>
+              <span class="tag">Maven</span>
+              <span class="tag">CSS</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <div></div>
+            <button class="gallery-toggle" onclick="toggleGallery(this)">Voir la capture</button>
+          </div>
+          <div class="project-gallery">
+            <img src="assets/cra_app_dashboard.png" alt="Dashboard CRA-APP Levaral">
+          </div>
+        </article>
+
+        <!-- PROJET 3 : Script PowerShell -->
+        <article class="project-card">
+          <div class="project-header">
+            <div class="project-icon">&#9881;</div>
+            <span class="project-context context-stage">Stage 2e année</span>
+          </div>
+          <div class="project-body">
+            <h2 class="project-title">Scripts PowerShell &mdash; Import WooCommerce</h2>
+            <p class="project-desc">
+              Scripts d'automatisation pour un client de Levaral : transformation de fichiers Excel en CSV compatibles WooCommerce, avec mapping automatique des images et reconstruction des hiérarchies de catégories produits.
+            </p>
+            <div class="project-details">
+              <h4>Ce que j'ai réalisé</h4>
+              <ul>
+                <li>Script de transformation Excel multi-feuilles vers CSV</li>
+                <li>Mapping automatique des codes produits vers les URLs d'images</li>
+                <li>Reconstruction des catégories hiérarchiques (Rubrique > Catégorie > Sous-catégories > Collection)</li>
+                <li>Gestion de l'encodage UTF-8 et normalisation des accents</li>
+                <li>Système de logs et gestion d'erreurs</li>
+              </ul>
+            </div>
+            <div class="tag-group">
+              <span class="tag">PowerShell</span>
+              <span class="tag">Excel</span>
+              <span class="tag">WooCommerce</span>
+              <span class="tag">CSV</span>
+              <span class="tag">Automatisation</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJET 4 : Jeu Pokemon JavaFX -->
+        <article class="project-card">
+          <div class="project-header">
+            <div class="project-icon">&#127918;</div>
+            <span class="project-context context-ecole">Projet scolaire</span>
+          </div>
+          <div class="project-body">
+            <h2 class="project-title">Jeu Memory Pokémon &mdash; JavaFX</h2>
+            <p class="project-desc">
+              Jeu de memory sur le thème Pokémon développé en JavaFX. Logique de jeu complète avec système de paires, gestion des scores et interface graphique interactive.
+            </p>
+            <div class="project-details">
+              <h4>Fonctionnalités</h4>
+              <ul>
+                <li>Interface graphique JavaFX avec animations</li>
+                <li>Logique de jeu : retournement de cartes, détection de paires</li>
+                <li>Gestion des scores et du temps</li>
+                <li>Design thème Pokémon</li>
+              </ul>
+            </div>
+            <div class="tag-group">
+              <span class="tag">Java</span>
+              <span class="tag">JavaFX</span>
+              <span class="tag">POO</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <div></div>
+            <button class="gallery-toggle" onclick="toggleGallery(this)">Voir les captures</button>
+          </div>
+          <div class="project-gallery">
+            <img src="assets/pokemon_Menu.png" alt="Menu du jeu Pokémon">
+            <img src="assets/pokemon_Game.png" alt="Gameplay du jeu Pokémon">
+          </div>
+        </article>
+
+        <!-- PROJET 5 : Site WordPress -->
+        <article class="project-card">
+          <div class="project-header">
+            <div class="project-icon">&#127760;</div>
+            <span class="project-context context-ecole">Projet scolaire</span>
+          </div>
+          <div class="project-body">
+            <h2 class="project-title">Site WordPress</h2>
+            <p class="project-desc">
+              Création d'un site web complet avec le CMS WordPress. Mise en place du thème, personnalisation, création de pages et gestion de contenu.
+            </p>
+            <div class="project-details">
+              <h4>Fonctionnalités</h4>
+              <ul>
+                <li>Installation et configuration de WordPress</li>
+                <li>Personnalisation du thème et de la mise en page</li>
+                <li>Création et structuration des pages</li>
+                <li>Gestion des médias et du contenu</li>
+              </ul>
+            </div>
+            <div class="tag-group">
+              <span class="tag">WordPress</span>
+              <span class="tag">CMS</span>
+              <span class="tag">HTML/CSS</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <div></div>
+            <button class="gallery-toggle" onclick="toggleGallery(this)">Voir la capture</button>
+          </div>
+          <div class="project-gallery">
+            <img src="assets/site_wordpress.png" alt="Capture du site WordPress">
+          </div>
+        </article>
+
+        <!-- PROJET 6 : Gestionnaire de contacts WinDev -->
+        <article class="project-card">
+          <div class="project-header">
+            <div class="project-icon">&#128209;</div>
+            <span class="project-context context-stage">Stage 1re année</span>
+          </div>
+          <div class="project-body">
+            <h2 class="project-title">Gestionnaire de Contacts &mdash; WinDev</h2>
+            <p class="project-desc">
+              Application desktop de gestion de contacts développée durant le stage de première année. Opérations CRUD complètes avec interface utilisateur WinDev.
+            </p>
+            <div class="project-details">
+              <h4>Fonctionnalités</h4>
+              <ul>
+                <li>Création, lecture, modification et suppression de contacts</li>
+                <li>Recherche et filtrage des contacts</li>
+                <li>Interface utilisateur avec formulaires de saisie</li>
+                <li>Persistance des données en base</li>
+              </ul>
+            </div>
+            <div class="tag-group">
+              <span class="tag">WinDev</span>
+              <span class="tag">SQL</span>
+              <span class="tag">CRUD</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <div></div>
+            <button class="gallery-toggle" onclick="toggleGallery(this)">Voir la capture</button>
+          </div>
+          <div class="project-gallery">
+            <img src="assets/Gestionnaire_de_contact.png" alt="Capture du gestionnaire de contacts">
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      Sami Boutiba &mdash; Portfolio BTS SIO SLAM 2024-2026
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('open');
+    });
+
+    function toggleGallery(btn) {
+      const gallery = btn.closest('.project-card').querySelector('.project-gallery');
+      gallery.classList.toggle('open');
+      btn.textContent = gallery.classList.contains('open') ? 'Masquer' : 'Voir les captures';
+    }
+  </script>
+
+</body>
+</html>
